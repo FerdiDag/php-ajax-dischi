@@ -15,13 +15,19 @@
             </div>
         </header>
         <form action="/action_page.php">
-            <label for="genres">Seleziona un genere:</label>
-            <select name="cars" id="generi">
+            <label for="genres">Seleziona un artista:</label>
+            <select name="" id="artisti">
                 <option value=""></option>
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="jazz">Jazz</option>
-                <option value="metal">Metal</option>
+                <option value="1">Bon Jovi</option>
+                <option value="2">Queen</option>
+                <option value="3">Sting</option>
+                <option value="4">Steve Gadd Band</option>
+                <option value="5">Iron Maiden</option>
+                <option value="6">Eric Clapton</option>
+                <option value="7">Deep Purple</option>
+                <option value="8">Metallica</option>
+                <option value="9">Dave Weckl</option>
+                <option value="10">Michael Jacjson</option>
             </select>
         </form>
 
@@ -29,12 +35,14 @@
         <div class="cds-container container">
 
             <script id="card-disco" type="text/x-handlebars-template">
-                <div class="cd">
+                <div class="cd" data-id="{{id}}">
                     <img src="{{ immagine }}" alt="">
-                    <h3> {{titolo}} </h3>
+                    <h3> {{titolo}}  </h3>
                     <span class="author">{{autore}}</span>
                     <span class="year">{{anno}}</span>
                     <span class="genre"> {{genere}}</span>
+                    <!-- <span class="ids" data-id="{{id}}"> {{id}}</span> -->
+
                 </div>
                 </script>
         </div>

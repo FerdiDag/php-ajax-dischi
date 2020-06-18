@@ -5,11 +5,11 @@ $(document).ready(function() {
 
 
 
-            console.log(data);
+
 
             for (var i = 0; i < data.length; i++) {
                 var disco_corrente = data[i];
-                // console.log(disco_corrente);
+                console.log(disco_corrente);
 
                 var dati_disco = {
                     'autore': disco_corrente.author,
@@ -17,6 +17,7 @@ $(document).ready(function() {
                     'immagine': disco_corrente.poster,
                     'anno': disco_corrente.year,
                     'genere': disco_corrente.genre,
+                    'id': disco_corrente.id,
                 };
 
 
@@ -35,19 +36,68 @@ $(document).ready(function() {
 
 
             }
-            //
-            // $("#generi").on("change", function() {
-            //     var value = $(this).val().toLowerCase();
-            //     $(".cd ").filter(function() {
-            //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            //     });
-            // });
+
+
 
 
         },
         error: function() {
             alert("E' avvenuto un errore.");
         }
+
+
+    });
+
+
+
+    $('#artisti').on('change', function() {
+        var value_artista = parseInt($(this).val());
+        console.log(value_artista);
+
+
+        $.ajax({
+            url: "array.php",
+            success: function(data) {
+                for (var i = 0; i < data.length; i++) {
+                    var disco_corrente = data[i];
+                    // console.log(disco_corrente);
+                    var artista_cd = disco_corrente.author;
+                    var id_disco = disco_corrente.id;
+                    // console.log(artista_cd);
+                    if (!value_artista) {
+                        $('.cd').show();
+                    } else {
+                        $('.cd').hide();
+                    }
+
+
+                    $('.cd[data-id=' + value_artista + ']').show();
+
+
+                }
+
+
+
+
+
+
+
+
+
+            },
+
+
+
+
+
+
+
+            error: function() {
+                alert("E' avvenuto un errore.");
+            }
+
+
+        });
 
 
     });

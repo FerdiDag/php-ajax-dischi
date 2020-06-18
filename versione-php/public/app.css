@@ -412,7 +412,7 @@ header img {
   padding: 100px 0;
 }
 
-.cd {
+.cds-container .cd {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -425,28 +425,27 @@ header img {
   text-align: center;
 }
 
-.cd img {
+.cds-container .cd img {
   max-width: 100%;
 }
 
-.cd h3 {
+.cds-container .cd h3 {
   margin: 20px 0;
   color: white;
   font-size: 19px;
-  text-transform: uppercase;
 }
 
-.cd .author {
+.cds-container .cd .author {
   color: grey;
   font-size: 17px;
 }
 
-.cd .year {
+.cds-container .cd .year {
   color: white;
   padding: 10px;
 }
 
-.cd .genre {
+.cds-container .cd .genre {
   color: darkgray;
   padding: 10px;
 }

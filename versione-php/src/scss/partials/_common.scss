@@ -27,43 +27,42 @@ header {
     align-items: center;
     flex-wrap: wrap;
     padding: 100px 0;
-}
 
-.cd {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    width: $larghezza-cd;
-    padding: 20px;
-    margin: 10px 20px;
-    height: 400px;
-    background: $colore-cd;
-    text-align: center;
+    .cd {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        width: $larghezza-cd;
+        padding: 20px;
+        margin: 10px 20px;
+        height: 400px;
+        background: $colore-cd;
+        text-align: center;
 
-    img {
-        max-width: 100%;
-    }
+        img {
+            max-width: 100%;
+        }
 
-    h3 {
-        margin: 20px 0;
-        color: white;
-        font-size: 19px;
-        text-transform: uppercase;
-    }
+        h3 {
+            margin: 20px 0;
+            color: white;
+            font-size: 19px;
+        }
 
-    .author {
-        color: grey;
-        font-size: 17px;
-    }
+        .author {
+            color: grey;
+            font-size: 17px;
+        }
 
-    .year {
-        color: $colore-anno;
-        padding: $padding-span;
-    }
+        .year {
+            color: $colore-anno;
+            padding: $padding-span;
+        }
 
-    .genre {
-        color: $colore-genere;
-        padding: $padding-span;
+        .genre {
+            color: $colore-genere;
+            padding: $padding-span;
+        }
     }
 }
